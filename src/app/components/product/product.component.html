@@ -1,0 +1,14 @@
+<!-- <img width="200px" [src]="product.image" alt=""> -->
+<article class="card-template">
+  <app-image [urlImage]="product.image"></app-image>
+  <div class="card-template__product-info">
+    <div class="card-template__description">
+      <p>$ {{ product.price }}</p>
+      <h2>{{ product.title }}</h2>
+    </div>
+    <div class="card-template__btns">
+      <!-- <button class="" (click)="onShowDetail()"></button> -->
+      <button class="add-to-cart" (click)="onAddToCart()"></button>
+    </div>
+  </div>
+</article>

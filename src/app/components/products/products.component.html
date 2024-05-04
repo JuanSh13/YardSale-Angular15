@@ -1,0 +1,22 @@
+<p>{{ totalPrice }}</p>
+<button (click)="toggleProductDetail()">Open</button>
+
+<div class="products--grid">
+  <app-product
+    (showProduct)="onShowDetail($event)"
+    (addedProduct)="onAddToShoppingCart($event)"
+    [product]="product"
+    *ngFor="let product of products; index as i"
+  ></app-product>
+</div>
+
+<div class="product-detail" [class.active]="showProductDetail">
+  <div *ngIf="productChosen">
+    <button (click)="toggleProductDetail()">Close</button>
+    <h3>{{ productChosen.title }}</h3>
+    <p>{{ productChosen.description }}</p>
+    <p>{{ productChosen.price }}</p>
+
+    <img [src]="productChosen.image" [alt]="productChosen.title">
+  </div>
+</div>

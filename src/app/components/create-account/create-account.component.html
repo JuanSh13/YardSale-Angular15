@@ -1,0 +1,31 @@
+<div class="signin-container">
+
+  <form (ngSubmit)="onRegister()" #myForm="ngForm">
+
+    <h2>My account</h2>
+
+    <!-- Name -->
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="form.userName" required placeholder="Camila Yokoo"/>
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="emial" [(ngModel)]="form.email" required placeholder="camilayokoo@gmail.com"/>
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="p/assword" name="password" [(ngModel)]="form.password" required placeholder="**************"/>
+    </div>
+
+    <!-- Button - Send Information -->
+    <button type="submit" [disabled]="myForm.invalid" [ngClass]="{
+      'valid': myForm.valid,
+      'invalid': myForm.invalid
+    }" class="send-information">Create</button>
+  </form>
+</div>

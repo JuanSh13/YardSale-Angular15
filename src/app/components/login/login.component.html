@@ -1,0 +1,37 @@
+<div class="login-container">
+
+  <form (ngSubmit)="onLogin()" #myForm="ngForm">
+
+    <!-- Email Address -->
+    <div class="input-group">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" [(ngModel)]="form.email" required placeholder="camilayokoo@gmail.com"/>
+      <ul *ngFor="let basedd of bdd; index as i">
+        <li *ngIf="form.email == bdd[i].email; else errorBlock">Coincide</li>
+        <ng-template #errorBlock>
+          <li>Error de Registro</li>
+        </ng-template>
+      </ul>
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="form.password" required placeholder="**************"/>
+      <p class="error-login">Error de registro</p>
+    </div>
+
+    <!-- Button - Send Information -->
+    <button type="submit" [disabled]="myForm.invalid" [ngClass]="{
+      'valid': myForm.valid,
+      'invalid': myForm.invalid
+    }" class="send-information">Create</button>
+
+    <!-- Button - Forgot My Password -->
+    <button type="submit" class="forgot-password">Forgot my password</button>
+
+  </form>
+
+  <button type="submit" class="sing-up-button" routerLink="/create_account">Sing Up</button>
+</div>
+

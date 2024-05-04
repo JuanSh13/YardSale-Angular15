@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary-main-color: #ffffff;
+  --secondary--main-color: #000000;
+
+  --primary-color: #acd9b2;
+  --secondary-color: #232830;
+  --tertiary-color: #c7c7c7;
+  --quaternary-color: #f7f7f7;
+
+  --shadow: #f5f4f4;
+
+  --font-size-xxs: ;
+  --font-size-xs: ;
+  --font-size-s: 1.4rem;
+  --font-size-m: 1.6rem;
+  --font-size-l: 1.8rem;
+  --font-size-xl: ;
+  --font-size-xxl: ;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Quicksand', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+}
